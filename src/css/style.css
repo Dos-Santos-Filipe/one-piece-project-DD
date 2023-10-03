@@ -1,0 +1,98 @@
+body {
+  background-color: #000;
+  overflow: hidden;
+}
+
+.main::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 80vw;
+  background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+.main .char {
+  display: none;
+  height: 100vh;
+}
+
+.main .char.selected {
+  display: block;
+}
+
+.main .char .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 380px;
+  z-index: 1;
+}
+
+.content .logo {
+  background-image: url("../images/one-piece-logo.png");
+  background-size: cover;
+  height: 100px;
+  width: 230px;
+  margin-bottom: 35px;
+}
+
+.content .char-name {
+  color: #fff;
+  font-size: 48px;
+  font-family: "Secular One", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.content .description {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  line-height: 24px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 180px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.btns .btn {
+  border: none;
+  background: #000;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btns .btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 8px #d9d9d9;
+}
+
+.btns .btn img {
+  border-radius: 50%;
+}
+
+.btns .btn.selected {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
